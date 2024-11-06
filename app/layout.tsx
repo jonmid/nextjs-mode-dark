@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import { Providers } from './providers';
 
-const geistSans = localFont({
+/* const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
   weight: '100 900',
@@ -12,6 +12,30 @@ const geistMono = localFont({
   src: './fonts/GeistMonoVF.woff',
   variable: '--font-geist-mono',
   weight: '100 900',
+}); */
+
+const kodeMonoRegular = localFont({
+  src: './fonts/KodeMono/KodeMono-Regular.ttf',
+  variable: '--font-kode-mono-regular',
+  weight: '400',
+});
+
+const kodeMonoMedium = localFont({
+  src: './fonts/KodeMono/KodeMono-Medium.ttf',
+  variable: '--font-kode-mono-medium',
+  weight: '500',
+});
+
+const kodeMonoSemiBold = localFont({
+  src: './fonts/KodeMono/KodeMono-SemiBold.ttf',
+  variable: '--font-kode-mono-semi-bold',
+  weight: '600',
+});
+
+const kodeMonoBold = localFont({
+  src: './fonts/KodeMono/KodeMono-Bold.ttf',
+  variable: '--font-kode-mono-bold',
+  weight: '700',
 });
 
 export const metadata: Metadata = {
@@ -27,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${kodeMonoRegular.variable} ${kodeMonoMedium.variable} ${kodeMonoSemiBold.variable} ${kodeMonoBold.variable} antialiased`}
       >
         <Providers>{children}</Providers>
       </body>
